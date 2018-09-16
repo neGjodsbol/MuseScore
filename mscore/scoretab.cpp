@@ -289,7 +289,7 @@ void ScoreTab::updateExcerpts()
             }
       else {
             tab2->setVisible(false);
-            setCurrent(0);
+            setCurrentIndex(0);
             }
       blockSignals(true);
       setExcerpt(0);
