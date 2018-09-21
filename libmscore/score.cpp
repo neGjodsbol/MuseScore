@@ -1855,7 +1855,7 @@ void MasterScore::removeExcerpt(Excerpt* ex)
 //   clone
 //---------------------------------------------------------
 
-MasterScore* MasterScore::clone()
+MasterScore* Score::clone()
       {
       QBuffer buffer;
       buffer.open(QIODevice::WriteOnly);

@@ -561,6 +561,7 @@ class Score : public QObject, public ScoreElement {
       void addMeasure(MeasureBase*, MeasureBase*);
       void readStaff(XmlReader&);
       bool read(XmlReader&);
+	  MasterScore* clone();
 
       Excerpt* excerpt()            { return _excerpt; }
       void setExcerpt(Excerpt* e)   { _excerpt = e;     }
@@ -1211,7 +1212,6 @@ class MasterScore : public Score {
       MasterScore();
       MasterScore(const MStyle&);
       virtual ~MasterScore();
-      MasterScore* clone();
 
       virtual bool isMaster() const override                          { return true;        }
       virtual UndoStack* undoStack() const override                   { return _movements->undo(); }
