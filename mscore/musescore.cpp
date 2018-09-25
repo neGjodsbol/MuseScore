@@ -7660,8 +7660,8 @@ void MuseScore::init(QStringList& argv)
       if (dataPath.isEmpty())
             dataPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 
-      if (useFactorySettings) {
-            if (deletePreferences)
+      if (deletePreferences) {
+            if (useFactorySettings)
                   QDir(dataPath).removeRecursively();
             QSettings settings;
             QFile::remove(settings.fileName() + ".lock"); //forcibly remove lock
