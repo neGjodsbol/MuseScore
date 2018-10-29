@@ -427,7 +427,9 @@ void readTextStyle206(MStyle* style, XmlReader& e, std::map<QString, std::map<Si
       QString family = "FreeSerif";
       double size = 10;
       bool sizeIsSpatiumDependent = false;
-      FontStyle fontStyle = FontStyle::Normal;
+      bool bold = false;
+      bool italic = false;
+      bool underline = false;
       Align align = Align::LEFT;
       QPointF offset;
       OffsetType offsetType = OffsetType::SPATIUM;
