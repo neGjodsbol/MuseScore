@@ -1322,6 +1322,8 @@ class MStyle {
 
       void reset(Score*);
 
+      void reset(Score*);
+
       static const char* valueType(const Sid);
       static const char* valueName(const Sid);
       static Sid styleIdx(const QString& name);
